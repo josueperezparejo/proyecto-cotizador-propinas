@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Propinas y Consumos</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Footer -->
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <header class="py-4 bg-primary">
+        <h1 class="text-center text-white fs-3">Calculadora de Consumos y Propinas</h1>
+    </header>
+
+    <div class="d-flex mt-4 justify-content-center">
+        <button data-bs-toggle="modal" data-bs-target="#formulario" type="button" class="btn btn-success">Nueva Orden</button>
+    </div>
+
+    <main id="platillos" class="container bg-light mt-5 p-4 d-none">
+        <h2 class="text-center my-4">Platillos</h2>
+        <div class="contenido"></div>
+    </main>
+
+    <section id="resumen" class="resumen bg-light container mt-5 p-4 d-none">
+        <h2 class="text-center my-4">Resumen De Consumo </h2>
+        <div class="contenido row">
+            <p class="text-center">Añade los elementos del pedido</p>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="formulario">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"">Restaurante App</h2>
+                        <button type=" button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label" for="mesa">Mesa</label>
+                            <input id="mesa" type="number" class="form-control" min="1" max="8">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="hora">Hora</label>
+                            <input id="hora" type="time" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button id="guardar-cliente" type="button" class="btn btn-primary">Crear Orden</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <footer class="mb-4 pb-4">
+            <hr class="border border-secondary border-2 opacity-25">
+
+            <h2 class="text-center pt-3">Frontend Developer</h2>
+            <p class="text-center mx-auto col-md-7">Hola, soy <span class="fw-bold text-primary">Josué Pérez. </span>Me
+                especializo en la producción, diseño, planificación y organización de proyectos de desarrollo web.
+                Además,
+                tengo
+                conocimientos en varias <span class="fw-bold text-primary">tecnologías</span> relacionadas.</p>
+            <div class="d-flex justify-content-center">
+                <ul class="col-md-4 nav justify-content-center pb-3 mb-3 gap-1">
+                    <li class="nav-item hvr-float-shadow">
+                        <img loading="lazy" width="40" src="./assets/icons/html-5.png" alt="icon logo png html5">
+                    </li>
+                    <li class="nav-item hvr-float-shadow">
+                        <img loading="lazy" width="40" src="./assets/icons/css-3.png" alt="icon logo png css3">
+                    </li>
+                    <li class="nav-item hvr-float-shadow">
+                        <img loading="lazy" width="40" src="./assets/icons/js.png" alt="icon logo png javascript">
+                    </li>
+                    <li class="nav-item hvr-float-shadow">
+                        <img loading="lazy" width="40" src="./assets/icons/git.png" alt="icon logo png git">
+                    </li>
+                    <li class="nav-item hvr-float-shadow">
+                        <img loading="lazy" width="40" src="./assets/icons/nodo-js.png" alt="icon logo png nodo">
+                    </li>
+                    <li class="nav-item hvr-float-shadow">
+                        <img loading="lazy" width="40" src="./assets/icons/react-js.png" alt="icon logo png react">
+                    </li>
+                    <li class="nav-item hvr-float-shadow">
+                        <img loading="lazy" width="40" src="./assets/icons/bootstrap.png" alt="icon logo png bootstrap">
+                    </li>
+                </ul>
+            </div>
+
+            <p class="text-center">Pueden conocer mis proyectos en mi perfil de GitHub, LinkedIn y Twitch.</p>
+            <ul class="nav justify-content-center list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="text-muted hvr-icon-fade-git" target="_blank" href="https://github.com/josueperezparejo">
+                        <i class="fa-2xl fa-brands fa-github hvr-icon-git"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-muted hvr-icon-fade-linkedin" target="_blank"
+                        href="https://www.linkedin.com/in/josue-david-perez-parejo-769983161">
+                        <i class="fa-2xl fa-brands fa-linkedin-in hvr-icon-linkedin"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-muted hvr-icon-fade-twitch" target="_blank" href="https://www.twitch.tv/josuepp1997">
+                        <i class="fa-2xl fa-brands fa-twitch hvr-icon-twitch"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/fc1e83c263.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
